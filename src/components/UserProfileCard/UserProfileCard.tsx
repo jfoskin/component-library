@@ -1,7 +1,7 @@
 //  importing user profile card interface
 import type { UserProfileCardProps } from "../../types"
 
-export function UserProfileCard({ user, showEmail, showRole, onEdit, children }: UserProfileCardProps) {
+export const  UserProfileCard: React.FC<UserProfileCardProps>=({ user, showEmail, showRole, onEdit, children }) => {
   return (
     <section className="mx-auto mt-6 w-full max-w-xl rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
       <div className="flex items-start justify-between gap-4">

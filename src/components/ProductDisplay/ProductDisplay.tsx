@@ -1,13 +1,13 @@
 // importing product prop interface
 import type { ProductDisplayProps } from "../../types"
 
-function ProductDisplay({
+const ProductDisplay: React.FC<ProductDisplayProps> = ({
   product,
   onAddToCart,
   showStockStatus,
   showDescription,
   children
-}: ProductDisplayProps) {
+} ) => {
   return (
     <section className="mx-auto mt-6 w-full max-w-xl rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
 

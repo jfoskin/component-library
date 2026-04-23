@@ -1,4 +1,4 @@
-
+import { useState } from 'react';
 import './App.css'
 import { UserProfileCard } from './components/UserProfileCard/UserProfileCard'
 import  ProductDisplay from './components/ProductDisplay/ProductDisplay'
@@ -13,8 +13,7 @@ function App() {
     setCartItems([...cartItems, productId]);
     setShowAlert(true);
   };
-
-
+  
   const user = {
     id: '1',
     name: 'John Doe',
@@ -34,7 +33,6 @@ function App() {
     <>
 <h1>hello</h1>
 
-          <div className="p-4">
       {showAlert && (
         <AlertBox
           type="success"
@@ -42,22 +40,26 @@ function App() {
           onClose={() => setShowAlert(false)}
         />
       )}
- 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-        <UserProfileCard
-          user={user}
-          showEmail={true}
-          showRole={true}
-        />
- 
-        <ProductDisplay
-          product={product}
-          showDescription={true}
-          showStockStatus={true}
-          onAddToCart={handleAddToCart}
-        />
-      </div>
-    </div>
+
+      <UserProfileCard
+        user={user}
+        showEmail={true}
+        showRole={true}
+        onEdit={(userId) => alert(`Editing user ${userId}`)}
+      >
+        <p className="text-sm text-gray-500">Last login: 2 hours ago</p>
+      </UserProfileCard>
+
+    <ProductDisplay
+      product={product}
+      showDescription={true}
+      showStockStatus={true}
+      onAddToCart={handleAddToCart}
+    >
+  <div className="text-sm text-gray-500">
+    Free shipping available
+  </div>
+</ProductDisplay>
 
     </>
   )

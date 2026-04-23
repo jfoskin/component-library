@@ -6,7 +6,7 @@
 
 1. How did you handle optional props in your components?
 
-  I provided conditional rendering to confirm that the value was true and if so show the element on the page 
+  I provided conditional rendering to confirm that the value was true and if so show the element on the page. 
 
 2. What considerations did you make when designing the component interfaces?
 
@@ -19,4 +19,4 @@
 
 4. What challenges did you face when implementing component composition?
 
-  Initially I was just displaying the properties in an element. However with my image link being broken it would not render details on the page so I removed the url and checked to only show if it exist
+  Initially I was just displaying the properties in an element. However with my image link being broken it would not render details on the page so I removed the url and checked to only show if it exist.

@@ -31,8 +31,10 @@ function App() {
 
   return (
     <>
-<h1>hello</h1>
 
+    {/* my initial connect test */}
+      <h1>hello</h1>
+    {/* conditional rendering for the alert box */}
       {showAlert && (
         <AlertBox
           type="success"
@@ -47,6 +49,7 @@ function App() {
         showRole={true}
         onEdit={(userId) => alert(`Editing user ${userId}`)}
       >
+        {/* this is a children prop */}
         <p className="text-sm text-gray-500">Last login: 2 hours ago</p>
       </UserProfileCard>
 

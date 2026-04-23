@@ -1,3 +1,4 @@
+//  importing user profile card interface
 import type { UserProfileCardProps } from "../../types"
 
 export function UserProfileCard({ user, showEmail, showRole, onEdit, children }: UserProfileCardProps) {
@@ -5,7 +6,13 @@ export function UserProfileCard({ user, showEmail, showRole, onEdit, children }:
     <section className="mx-auto mt-6 w-full max-w-xl rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
       <div className="flex items-start justify-between gap-4">
         <div className="space-y-1 text-left">
+
+          {/* render required elements */}
+
           <p className="text-lg font-semibold text-gray-900">{user.name}</p>
+
+        {/* if optional parameters are passed render them */}
+
           {showEmail && <p className="text-sm text-gray-600">{user.email}</p>}
           {showRole && <p className="text-sm font-medium text-gray-700">{user.role}</p>}
         </div>

@@ -1,3 +1,4 @@
+// importing product prop interface
 import type { ProductDisplayProps } from "../../types"
 
 function ProductDisplay({
@@ -9,6 +10,8 @@ function ProductDisplay({
 }: ProductDisplayProps) {
   return (
     <section className="mx-auto mt-6 w-full max-w-xl rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+
+      {/* conditional rendering if product img is true */}
       {product.imageUrl && (
         <img
           src={product.imageUrl}
@@ -17,8 +20,11 @@ function ProductDisplay({
         />
       )}
 
+      {/* rendering required elements */}
       <h2 className="text-xl font-semibold text-gray-900">{product.name}</h2>
       <p className="mt-1 text-lg font-medium text-gray-700">${product.price}</p>
+
+      {/* conditional rendring for optional props */}
 
       {showDescription && (
         <p className="mt-3 text-sm text-gray-600">{product.description}</p>
@@ -30,6 +36,9 @@ function ProductDisplay({
         </p>
       )}
 
+
+      {/* button functionality */}
+
       {onAddToCart && (
         <button
           onClick={() => onAddToCart(product.id)}
@@ -38,6 +47,8 @@ function ProductDisplay({
           Add to Cart
         </button>
       )}
+
+      {/* if children exist render them */}
 
       {children && <div className="mt-4 border-t border-gray-100 pt-3">{children}</div>}
     </section>

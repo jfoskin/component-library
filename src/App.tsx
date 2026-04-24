@@ -32,8 +32,6 @@ function App() {
   return (
     <>
 
-    {/* my initial connect test */}
-      <h1>hello</h1>
     {/* conditional rendering for the alert box */}
       {showAlert && (
         <AlertBox
